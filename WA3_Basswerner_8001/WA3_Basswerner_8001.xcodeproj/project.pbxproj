@@ -16,6 +16,9 @@
 		933E3CD82B73E3C100F247F3 /* WA3_Basswerner_8001Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E3CD72B73E3C100F247F3 /* WA3_Basswerner_8001Tests.swift */; };
 		933E3CE22B73E3C100F247F3 /* WA3_Basswerner_8001UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E3CE12B73E3C100F247F3 /* WA3_Basswerner_8001UITests.swift */; };
 		933E3CE42B73E3C100F247F3 /* WA3_Basswerner_8001UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E3CE32B73E3C100F247F3 /* WA3_Basswerner_8001UITestsLaunchTests.swift */; };
+		933E3CF42B73E4E200F247F3 /* LandingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E3CF32B73E4E200F247F3 /* LandingScreen.swift */; };
+		933E3CF82B73F18D00F247F3 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E3CF72B73F18D00F247F3 /* ProfileScreen.swift */; };
+		933E3CFA2B73F1A700F247F3 /* ProfileScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E3CF92B73F1A700F247F3 /* ProfileScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		933E3CDD2B73E3C100F247F3 /* WA3_Basswerner_8001UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WA3_Basswerner_8001UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		933E3CE12B73E3C100F247F3 /* WA3_Basswerner_8001UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WA3_Basswerner_8001UITests.swift; sourceTree = "<group>"; };
 		933E3CE32B73E3C100F247F3 /* WA3_Basswerner_8001UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WA3_Basswerner_8001UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		933E3CF32B73E4E200F247F3 /* LandingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreen.swift; sourceTree = "<group>"; };
+		933E3CF72B73F18D00F247F3 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		933E3CF92B73F1A700F247F3 /* ProfileScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,10 @@
 		933E3CBF2B73E3BE00F247F3 /* WA3_Basswerner_8001 */ = {
 			isa = PBXGroup;
 			children = (
+				933E3CF22B73E48800F247F3 /* ProfileScreen */,
+				933E3CF12B73E47C00F247F3 /* LandingScreen */,
 				933E3CC02B73E3BE00F247F3 /* AppDelegate.swift */,
 				933E3CC22B73E3BE00F247F3 /* SceneDelegate.swift */,
-				933E3CC42B73E3BE00F247F3 /* ViewController.swift */,
 				933E3CC62B73E3BE00F247F3 /* Main.storyboard */,
 				933E3CC92B73E3C000F247F3 /* Assets.xcassets */,
 				933E3CCB2B73E3C000F247F3 /* LaunchScreen.storyboard */,
@@ -125,6 +132,24 @@
 				933E3CE32B73E3C100F247F3 /* WA3_Basswerner_8001UITestsLaunchTests.swift */,
 			);
 			path = WA3_Basswerner_8001UITests;
+			sourceTree = "<group>";
+		};
+		933E3CF12B73E47C00F247F3 /* LandingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				933E3CF32B73E4E200F247F3 /* LandingScreen.swift */,
+				933E3CC42B73E3BE00F247F3 /* ViewController.swift */,
+			);
+			path = LandingScreen;
+			sourceTree = "<group>";
+		};
+		933E3CF22B73E48800F247F3 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				933E3CF72B73F18D00F247F3 /* ProfileScreen.swift */,
+				933E3CF92B73F1A700F247F3 /* ProfileScreenViewController.swift */,
+			);
+			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +285,10 @@
 			files = (
 				933E3CC52B73E3BE00F247F3 /* ViewController.swift in Sources */,
 				933E3CC12B73E3BE00F247F3 /* AppDelegate.swift in Sources */,
+				933E3CFA2B73F1A700F247F3 /* ProfileScreenViewController.swift in Sources */,
 				933E3CC32B73E3BE00F247F3 /* SceneDelegate.swift in Sources */,
+				933E3CF42B73E4E200F247F3 /* LandingScreen.swift in Sources */,
+				933E3CF82B73F18D00F247F3 /* ProfileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
