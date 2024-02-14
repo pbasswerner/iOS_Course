@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     let landingScreen = LandingScreen()
     var package: Package = Package()
     let phoneTypesPickerData = ["Cell", "Home", "Work"]
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         
         landingScreen.showProfileButton.addTarget(self, action: #selector(onShowProfileButtonClicked), for: .touchUpInside)
     }
-
+    
     
     @objc func onShowProfileButtonClicked(){
         let validName:Bool = isValidName()
@@ -61,9 +61,9 @@ class ViewController: UIViewController {
         let validZip:Bool = isValidZip()
         
         if(validEmail && validName && validPhoneNumber && validAddress && validCityState && validZip){
-          pushToNextViewController(self)
+            pushToNextViewController(self)
         }
-
+        
     }
     func isValidName() -> Bool {
         let name = landingScreen.nameTextField.text
@@ -94,7 +94,7 @@ class ViewController: UIViewController {
         }
         return false
     }
-
+    
     func isValidPhoneNumber() -> Bool {
         let phoneRegex = "^[0-9+]{0,1}([0-9]{10,15})$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
@@ -140,10 +140,10 @@ class ViewController: UIViewController {
     }
     
     func isValidZip() -> Bool {
-            let zipRegex = "^\\d{5}$"
-            let zipTest = NSPredicate(format: "SELF MATCHES %@", zipRegex)
+        let zipRegex = "^\\d{5}$"
+        let zipTest = NSPredicate(format: "SELF MATCHES %@", zipRegex)
         
-    
+        
         if let unwrappedZip = landingScreen.zipTextField.text{
             if(!unwrappedZip.isEmpty && zipTest.evaluate(with: unwrappedZip)){
                 updatePackage(fieldToUpdate: "zip", value: unwrappedZip, package: package)
@@ -190,7 +190,6 @@ class ViewController: UIViewController {
     @IBAction func pushToNextViewController(_ sender: Any) {
         let profileScreenViewController = ProfileScreenViewController()
         profileScreenViewController.receivedPackage = package
-        print("Phone Type: \(String(describing: profileScreenViewController.receivedPackage.phoneType))")
         
         let backButton = UIBarButtonItem()
         backButton.title = "Create Profile"
@@ -198,7 +197,7 @@ class ViewController: UIViewController {
         
         navigationController?.pushViewController(profileScreenViewController, animated: true)
     }
-
+    
 }
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -211,27 +210,27 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-          selectedPhoneType = phoneTypesPickerData[row]
+        selectedPhoneType = phoneTypesPickerData[row]
         updatePackage(fieldToUpdate: "phoneType", value: selectedPhoneType, package: self.package)
-      }
+    }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var label: UILabel
-
+        
         if let v = view as? UILabel {
             label = v
         } else {
             label = UILabel()
         }
-
+        
         label.textColor = .black
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16) // Set your custom font size here
-
+        
         label.text = phoneTypesPickerData[row]
-
+        
         return label
     }
-
+    
 }
 
