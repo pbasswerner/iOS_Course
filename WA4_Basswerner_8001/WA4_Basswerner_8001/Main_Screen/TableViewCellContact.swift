@@ -24,11 +24,11 @@ class TableViewCellContact: UITableViewCell {
         setupWrapperCellView()
         setUpNameLabel()
         setUpEmailLabel()
-        //        initContraints()
+        initConstraints()
     }
     
     func setupWrapperCellView(){
-        wrapperCellView = UITableViewCell()
+        wrapperCellView = UIView()
         wrapperCellView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(wrapperCellView)
     }
@@ -74,9 +74,7 @@ class TableViewCellContact: UITableViewCell {
             emailLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
             emailLabel.heightAnchor.constraint(equalToConstant: 20),
             
-            phoneLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 4),
-            phoneLabel.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
-            phoneLabel.heightAnchor.constraint(equalToConstant: 20),
+    
             
             //In the last constraint of the constraints array, we finally set the height of the wrapperCellView. The wrapperCellView is the container of other UI elements, so we need to set up the height of the container after we set the heights of other elements. We count the height of the container by adding the heights of the UI elements and the margins. (4+20+4+20+4+20+4 = 76).
             wrapperCellView.heightAnchor.constraint(equalToConstant: 76)

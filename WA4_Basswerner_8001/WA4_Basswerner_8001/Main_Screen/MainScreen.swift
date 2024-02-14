@@ -18,6 +18,7 @@ class MainScreen: UIView {
         //MARK: initializing a TableView...
         setupTableViewContacts()
         initConstraints()
+        
     }
     
     func setupTableViewContacts() {
