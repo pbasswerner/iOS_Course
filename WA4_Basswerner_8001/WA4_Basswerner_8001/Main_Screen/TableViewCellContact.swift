@@ -24,35 +24,42 @@ class TableViewCellContact: UITableViewCell {
         setupWrapperCellView()
         setUpNameLabel()
         setUpEmailLabel()
+        setUpPhoneLabel()
         initConstraints()
     }
     
     func setupWrapperCellView(){
+        //        wrapperCellView = UIView()
+        //        wrapperCellView.layer.borderColor = UIColor.gray.cgColor
+        //        wrapperCellView.translatesAutoresizingMaskIntoConstraints = false
+        //        self.addSubview(wrapperCellView)
+        
         wrapperCellView = UIView()
+        wrapperCellView.layer.borderWidth = 1.0
+        wrapperCellView.layer.borderColor = UIColor.gray.cgColor
+        wrapperCellView.layer.cornerRadius = 8.0
+        wrapperCellView.clipsToBounds = true
         wrapperCellView.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(wrapperCellView)
+        self.contentView.addSubview(wrapperCellView)
     }
     
     func setUpNameLabel() {
         nameLabel = UILabel()
-        nameLabel.text = "Name: "
-        nameLabel.font = UIFont.systemFont(ofSize: 16)
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(nameLabel)
     }
     
     func setUpEmailLabel() {
         emailLabel = UILabel()
-        emailLabel.text = "Email: "
-        emailLabel.font = UIFont.systemFont(ofSize: 16)
+        emailLabel.font = UIFont.systemFont(ofSize: 14)
         emailLabel.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(emailLabel)
     }
     
     func setUpPhoneLabel() {
         phoneLabel = UILabel()
-        phoneLabel.text = "Phone: "
-        phoneLabel.font = UIFont.systemFont(ofSize: 16)
+        phoneLabel.font = UIFont.systemFont(ofSize: 14)
         phoneLabel.textAlignment = .center
         phoneLabel.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(phoneLabel)
@@ -61,23 +68,27 @@ class TableViewCellContact: UITableViewCell {
     
     func initConstraints(){
         NSLayoutConstraint.activate([
-            wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor),
-            wrapperCellView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            wrapperCellView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 8),
+                wrapperCellView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 8),
+                wrapperCellView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -8),
+                wrapperCellView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -8),
+
+                nameLabel.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 8),
+                nameLabel.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 8),
+                nameLabel.heightAnchor.constraint(equalToConstant: 20),
+
+                emailLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+                emailLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
+                emailLabel.heightAnchor.constraint(equalToConstant: 20),
+
+                phoneLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 8),
+                phoneLabel.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
+                phoneLabel.heightAnchor.constraint(equalToConstant: 20),
             
-            nameLabel.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 4),
-            nameLabel.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 4),
-            nameLabel.heightAnchor.constraint(equalToConstant: 20),
             
-            emailLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
-            emailLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
-            emailLabel.heightAnchor.constraint(equalToConstant: 20),
-            
-    
             
             //In the last constraint of the constraints array, we finally set the height of the wrapperCellView. The wrapperCellView is the container of other UI elements, so we need to set up the height of the container after we set the heights of other elements. We count the height of the container by adding the heights of the UI elements and the margins. (4+20+4+20+4+20+4 = 76).
-            wrapperCellView.heightAnchor.constraint(equalToConstant: 76)
+            wrapperCellView.heightAnchor.constraint(equalToConstant: 92)
         ])
     }
     
@@ -97,7 +108,6 @@ class TableViewCellContact: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
     }
     
 }

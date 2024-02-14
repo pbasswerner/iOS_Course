@@ -8,22 +8,59 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    let detailsScreen = DetailsScreen()
+    var receivedContact: Contact = Contact()
+    
+    override func loadView() {
+        view = detailsScreen
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        
+        if let unwrappedName = receivedContact.name{
+            if !unwrappedName.isEmpty{
+                detailsScreen.nameLabel.text = "\(unwrappedName)"
+            }
+        }
+        
+        if let unwrappedEmail = receivedContact.email{
+            if !unwrappedEmail.isEmpty{
+                detailsScreen.emailLabel.text = "Email: \(unwrappedEmail)"
+            }
+        }
+        
+        
+        if let unwrappedPhoneNumber = receivedContact.phoneNumber{
+            if !unwrappedPhoneNumber.isEmpty{
+                if let unwrappedPhoneType = receivedContact.phoneType{
+                    if !unwrappedPhoneType.isEmpty{
+                        detailsScreen.phoneLabel.text = "Phone: \(unwrappedPhoneNumber) (\(unwrappedPhoneType))"
+                    }
+                }
+            }
+        }
+        
+        
+        if let unwrappedAddress = receivedContact.address{
+            if !unwrappedAddress.isEmpty{
+                detailsScreen.addressLabel.text = "\(unwrappedAddress)"
+            }
+        }
+        
+        if let unwrappedCityState = receivedContact.cityState{
+            if !unwrappedCityState.isEmpty{
+                detailsScreen.cityStateLabel.text = "\(unwrappedCityState)"
+            }
+        }
+        
+        if let unwrappedZip = receivedContact.zip{
+            if !unwrappedZip.isEmpty{
+                detailsScreen.zipLabel.text = "\(unwrappedZip)"
+            }
+        }
     }
-    */
-
+    
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93C56C822B7D426B00B9FE0A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C56C812B7D426B00B9FE0A /* DetailsViewController.swift */; };
+		93C56C842B7D428400B9FE0A /* DetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C56C832B7D428400B9FE0A /* DetailsScreen.swift */; };
 		93C7B1292B7C112A00B084B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7B1282B7C112A00B084B4 /* AppDelegate.swift */; };
 		93C7B12B2B7C112A00B084B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7B12A2B7C112A00B084B4 /* SceneDelegate.swift */; };
 		93C7B12D2B7C112A00B084B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7B12C2B7C112A00B084B4 /* ViewController.swift */; };
@@ -15,10 +17,14 @@
 		93C7B1352B7C112D00B084B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C7B1332B7C112D00B084B4 /* LaunchScreen.storyboard */; };
 		93C7B1432B7C213800B084B4 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7B1422B7C213800B084B4 /* MainScreen.swift */; };
 		93C7B1452B7C264A00B084B4 /* TableViewCellContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7B1442B7C264A00B084B4 /* TableViewCellContact.swift */; };
-		93C7B1482B7C416100B084B4 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7B1472B7C416100B084B4 /* Contacts.swift */; };
+		93C7B14A2B7CFE7600B084B4 /* AddNewContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7B1492B7CFE7600B084B4 /* AddNewContactScreen.swift */; };
+		93C7B14C2B7D006E00B084B4 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7B14B2B7D006E00B084B4 /* AddNewContactViewController.swift */; };
+		93C7B14E2B7D08B600B084B4 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C7B14D2B7D08B600B084B4 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93C56C812B7D426B00B9FE0A /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		93C56C832B7D428400B9FE0A /* DetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreen.swift; sourceTree = "<group>"; };
 		93C7B1252B7C112A00B084B4 /* WA4_Basswerner_8001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WA4_Basswerner_8001.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C7B1282B7C112A00B084B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C7B12A2B7C112A00B084B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +35,9 @@
 		93C7B1362B7C112D00B084B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C7B1422B7C213800B084B4 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		93C7B1442B7C264A00B084B4 /* TableViewCellContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellContact.swift; sourceTree = "<group>"; };
-		93C7B1472B7C416100B084B4 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		93C7B1492B7CFE7600B084B4 /* AddNewContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactScreen.swift; sourceTree = "<group>"; };
+		93C7B14B2B7D006E00B084B4 /* AddNewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactViewController.swift; sourceTree = "<group>"; };
+		93C7B14D2B7D08B600B084B4 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,8 @@
 		93C7B1402B7C151E00B084B4 /* Add_New_Contact_Screen */ = {
 			isa = PBXGroup;
 			children = (
+				93C7B1492B7CFE7600B084B4 /* AddNewContactScreen.swift */,
+				93C7B14B2B7D006E00B084B4 /* AddNewContactViewController.swift */,
 			);
 			path = Add_New_Contact_Screen;
 			sourceTree = "<group>";
@@ -96,6 +106,8 @@
 		93C7B1412B7C157600B084B4 /* Details_Screen */ = {
 			isa = PBXGroup;
 			children = (
+				93C56C812B7D426B00B9FE0A /* DetailsViewController.swift */,
+				93C56C832B7D428400B9FE0A /* DetailsScreen.swift */,
 			);
 			path = Details_Screen;
 			sourceTree = "<group>";
@@ -103,7 +115,7 @@
 		93C7B1462B7C414300B084B4 /* Data_Model */ = {
 			isa = PBXGroup;
 			children = (
-				93C7B1472B7C416100B084B4 /* Contacts.swift */,
+				93C7B14D2B7D08B600B084B4 /* Contact.swift */,
 			);
 			path = Data_Model;
 			sourceTree = "<group>";
@@ -180,10 +192,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				93C7B1432B7C213800B084B4 /* MainScreen.swift in Sources */,
+				93C7B14A2B7CFE7600B084B4 /* AddNewContactScreen.swift in Sources */,
+				93C56C842B7D428400B9FE0A /* DetailsScreen.swift in Sources */,
+				93C56C822B7D426B00B9FE0A /* DetailsViewController.swift in Sources */,
 				93C7B12D2B7C112A00B084B4 /* ViewController.swift in Sources */,
-				93C7B1482B7C416100B084B4 /* Contacts.swift in Sources */,
 				93C7B1452B7C264A00B084B4 /* TableViewCellContact.swift in Sources */,
+				93C7B14E2B7D08B600B084B4 /* Contact.swift in Sources */,
 				93C7B1292B7C112A00B084B4 /* AppDelegate.swift in Sources */,
+				93C7B14C2B7D006E00B084B4 /* AddNewContactViewController.swift in Sources */,
 				93C7B12B2B7C112A00B084B4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
