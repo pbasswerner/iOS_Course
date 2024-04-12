@@ -14,6 +14,11 @@
 		9357DB1A2BC72DEB00386BE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9357DB192BC72DEB00386BE1 /* Assets.xcassets */; };
 		9357DB1D2BC72DEB00386BE1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9357DB1C2BC72DEB00386BE1 /* Base */; };
 		9357DB252BC72DFA00386BE1 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9357DB242BC72DFA00386BE1 /* SpotifyiOS.framework */; };
+		9357DB2B2BC9C17100386BE1 /* ConnectLandingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357DB2A2BC9C17100386BE1 /* ConnectLandingScreen.swift */; };
+		9357DB2D2BC9C4AE00386BE1 /* ConnectLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357DB2C2BC9C4AE00386BE1 /* ConnectLandingViewController.swift */; };
+		9357DB2F2BC9C86E00386BE1 /* spotifyLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9357DB2E2BC9C86E00386BE1 /* spotifyLogo.png */; };
+		9357DB312BC9CDDF00386BE1 /* MoodLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357DB302BC9CDDF00386BE1 /* MoodLogViewController.swift */; };
+		9357DB332BC9D3DC00386BE1 /* MoodLogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357DB322BC9D3DC00386BE1 /* MoodLogScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		9357DB1E2BC72DEB00386BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9357DB242BC72DFA00386BE1 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		9357DB262BC72E5C00386BE1 /* Moody-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moody-Bridging-Header.h"; sourceTree = "<group>"; };
+		9357DB2A2BC9C17100386BE1 /* ConnectLandingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectLandingScreen.swift; sourceTree = "<group>"; };
+		9357DB2C2BC9C4AE00386BE1 /* ConnectLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectLandingViewController.swift; sourceTree = "<group>"; };
+		9357DB2E2BC9C86E00386BE1 /* spotifyLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotifyLogo.png; sourceTree = "<group>"; };
+		9357DB302BC9CDDF00386BE1 /* MoodLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLogViewController.swift; sourceTree = "<group>"; };
+		9357DB322BC9D3DC00386BE1 /* MoodLogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLogScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +70,30 @@
 		9357DB0F2BC72DE800386BE1 /* Moody */ = {
 			isa = PBXGroup;
 			children = (
-				9357DB102BC72DE800386BE1 /* AppDelegate.swift */,
-				9357DB122BC72DE800386BE1 /* SceneDelegate.swift */,
-				9357DB142BC72DE800386BE1 /* ViewController.swift */,
+				9357DB292BC872F400386BE1 /* Files */,
+				9357DB2A2BC9C17100386BE1 /* ConnectLandingScreen.swift */,
+				9357DB2C2BC9C4AE00386BE1 /* ConnectLandingViewController.swift */,
+				9357DB302BC9CDDF00386BE1 /* MoodLogViewController.swift */,
+				9357DB322BC9D3DC00386BE1 /* MoodLogScreen.swift */,
+			);
+			path = Moody;
+			sourceTree = "<group>";
+		};
+		9357DB292BC872F400386BE1 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				9357DB2E2BC9C86E00386BE1 /* spotifyLogo.png */,
 				9357DB162BC72DE800386BE1 /* Main.storyboard */,
 				9357DB192BC72DEB00386BE1 /* Assets.xcassets */,
-				9357DB1B2BC72DEB00386BE1 /* LaunchScreen.storyboard */,
 				9357DB1E2BC72DEB00386BE1 /* Info.plist */,
 				9357DB242BC72DFA00386BE1 /* SpotifyiOS.framework */,
 				9357DB262BC72E5C00386BE1 /* Moody-Bridging-Header.h */,
+				9357DB1B2BC72DEB00386BE1 /* LaunchScreen.storyboard */,
+				9357DB102BC72DE800386BE1 /* AppDelegate.swift */,
+				9357DB122BC72DE800386BE1 /* SceneDelegate.swift */,
+				9357DB142BC72DE800386BE1 /* ViewController.swift */,
 			);
-			path = Moody;
+			name = Files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9357DB1A2BC72DEB00386BE1 /* Assets.xcassets in Resources */,
+				9357DB2F2BC9C86E00386BE1 /* spotifyLogo.png in Resources */,
 				9357DB1D2BC72DEB00386BE1 /* Base in Resources */,
 				9357DB182BC72DE800386BE1 /* Base in Resources */,
 			);
@@ -145,6 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9357DB312BC9CDDF00386BE1 /* MoodLogViewController.swift in Sources */,
+				9357DB2B2BC9C17100386BE1 /* ConnectLandingScreen.swift in Sources */,
+				9357DB2D2BC9C4AE00386BE1 /* ConnectLandingViewController.swift in Sources */,
+				9357DB332BC9D3DC00386BE1 /* MoodLogScreen.swift in Sources */,
 				9357DB152BC72DE800386BE1 /* ViewController.swift in Sources */,
 				9357DB112BC72DE800386BE1 /* AppDelegate.swift in Sources */,
 				9357DB132BC72DE800386BE1 /* SceneDelegate.swift in Sources */,

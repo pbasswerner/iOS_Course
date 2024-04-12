@@ -21,5 +21,25 @@
 			</array>
 		</dict>
 	</dict>
+	<key>App Transport Security Settings</key>
+	<dict>
+		<key>AllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>ApplicationQueriesSchemes</key>
+	<array>
+		<string>spotify</string>
+	</array>
+	<key>URL Types</key>
+	<array>
+		<dict>
+			<key>URL Schemes</key>
+			<array>
+				<string>Moody</string>
+			</array>
+			<key>URL identifier</key>
+			<string>com.paulabwj.Moody</string>
+		</dict>
+	</array>
 </dict>
 </plist>
