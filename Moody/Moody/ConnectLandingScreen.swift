@@ -23,7 +23,6 @@ class ConnectLandingScreen: UIView {
 
     private func setupViews() {
         backgroundColor = .white
-
         setUpLogo()
         setUpConnectButton()
     }
@@ -33,7 +32,7 @@ class ConnectLandingScreen: UIView {
         spotifyLogo = UIImageView()
         spotifyLogo.contentMode = .scaleAspectFit
         spotifyLogo.translatesAutoresizingMaskIntoConstraints = false
-        spotifyLogo.image = UIImage(named: "spotifyLogo") // Make sure to add the appropriate logo in your assets
+        spotifyLogo.image = UIImage(named: "spotifyLogo")
         addSubview(spotifyLogo)
     }
     

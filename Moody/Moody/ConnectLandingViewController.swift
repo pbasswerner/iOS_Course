@@ -9,7 +9,6 @@
 import UIKit
 
 class ConnectLandingViewController: UIViewController {
-    // The main view for this controller, cast to the custom view type.
     var connectLandingScreen: ConnectLandingScreen {
         return view as! ConnectLandingScreen
     }
@@ -47,11 +46,15 @@ class ConnectLandingViewController: UIViewController {
     
     func navigateToLogMood() {
         print("Navigating to Log Mood screen...")
-        let moodLogViewController = MoodLogViewController() // Assuming you have this view controller defined
+        let moodLogViewController = MoodLogViewController()
         navigationController?.pushViewController(moodLogViewController, animated: true)
     }
     
     @objc private func onConnectButtonClicked() {
+        loginSpotify()
+        
+        getLatestTracks()
+        
         print("Attempting to navigate...")
         if let navigationController = navigationController {
             let moodLogViewController = MoodLogViewController()

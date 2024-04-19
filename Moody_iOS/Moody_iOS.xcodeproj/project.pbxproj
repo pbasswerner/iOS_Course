@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		930D3E252BD016FE00465ED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930D3E242BD016FE00465ED5 /* AppDelegate.swift */; };
+		930D3E272BD016FE00465ED5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930D3E262BD016FE00465ED5 /* SceneDelegate.swift */; };
+		930D3E292BD016FE00465ED5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930D3E282BD016FE00465ED5 /* ViewController.swift */; };
+		930D3E2C2BD016FE00465ED5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 930D3E2B2BD016FE00465ED5 /* Base */; };
+		930D3E2E2BD0170200465ED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930D3E2D2BD0170200465ED5 /* Assets.xcassets */; };
+		930D3E312BD0170200465ED5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 930D3E302BD0170200465ED5 /* Base */; };
+		930D3E3B2BD02A5900465ED5 /* SpotifyiOS.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930D3E392BD0295500465ED5 /* SpotifyiOS.xcframework */; };
+		930D3E3C2BD02A5900465ED5 /* SpotifyiOS.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 930D3E392BD0295500465ED5 /* SpotifyiOS.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		930D3E3F2BD033D400465ED5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930D3E3E2BD033D400465ED5 /* Constants.swift */; };
+		930D3E462BD05F8B00465ED5 /* SpotifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930D3E452BD05F8B00465ED5 /* SpotifyService.swift */; };
+		93B528882BD064FB002C69EB /* ConnectLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B528872BD064FB002C69EB /* ConnectLandingViewController.swift */; };
+		93B5288A2BD06520002C69EB /* ConnectLandingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B528892BD06520002C69EB /* ConnectLandingScreen.swift */; };
+		93B5288C2BD0670E002C69EB /* spotifyLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 93B5288B2BD0670E002C69EB /* spotifyLogo.png */; };
+		93B5288F2BD0A46A002C69EB /* MoodLogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B5288E2BD0A46A002C69EB /* MoodLogScreen.swift */; };
+		93B528912BD0A490002C69EB /* MoodLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B528902BD0A490002C69EB /* MoodLogViewController.swift */; };
+		93B528962BD1B1A8002C69EB /* MoodSongPlayerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B528952BD1B1A8002C69EB /* MoodSongPlayerScreen.swift */; };
+		93B528982BD1B223002C69EB /* MoodSongPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B528972BD1B223002C69EB /* MoodSongPlayerViewController.swift */; };
+		93B5289A2BD2CEDD002C69EB /* SpotifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B528992BD2CEDD002C69EB /* SpotifyModels.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		930D3E3D2BD02A5900465ED5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				930D3E3C2BD02A5900465ED5 /* SpotifyiOS.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		930D3E212BD016FE00465ED5 /* Moody_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moody_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		930D3E242BD016FE00465ED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		930D3E262BD016FE00465ED5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		930D3E282BD016FE00465ED5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		930D3E2B2BD016FE00465ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		930D3E2D2BD0170200465ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		930D3E302BD0170200465ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		930D3E322BD0170200465ED5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		930D3E392BD0295500465ED5 /* SpotifyiOS.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SpotifyiOS.xcframework; sourceTree = "<group>"; };
+		930D3E3E2BD033D400465ED5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		930D3E402BD035C000465ED5 /* Moody_iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moody_iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		930D3E452BD05F8B00465ED5 /* SpotifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyService.swift; sourceTree = "<group>"; };
+		93B528872BD064FB002C69EB /* ConnectLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectLandingViewController.swift; sourceTree = "<group>"; };
+		93B528892BD06520002C69EB /* ConnectLandingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectLandingScreen.swift; sourceTree = "<group>"; };
+		93B5288B2BD0670E002C69EB /* spotifyLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spotifyLogo.png; path = ../../Moody/Moody/spotifyLogo.png; sourceTree = "<group>"; };
+		93B5288E2BD0A46A002C69EB /* MoodLogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLogScreen.swift; sourceTree = "<group>"; };
+		93B528902BD0A490002C69EB /* MoodLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLogViewController.swift; sourceTree = "<group>"; };
+		93B528952BD1B1A8002C69EB /* MoodSongPlayerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSongPlayerScreen.swift; sourceTree = "<group>"; };
+		93B528972BD1B223002C69EB /* MoodSongPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSongPlayerViewController.swift; sourceTree = "<group>"; };
+		93B528992BD2CEDD002C69EB /* SpotifyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyModels.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		930D3E1E2BD016FE00465ED5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				930D3E3B2BD02A5900465ED5 /* SpotifyiOS.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		930D3E182BD016FE00465ED5 = {
+			isa = PBXGroup;
+			children = (
+				930D3E232BD016FE00465ED5 /* Moody_iOS */,
+				930D3E222BD016FE00465ED5 /* Products */,
+				930D3E402BD035C000465ED5 /* Moody_iOS-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		930D3E222BD016FE00465ED5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				930D3E212BD016FE00465ED5 /* Moody_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		930D3E232BD016FE00465ED5 /* Moody_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				93B5288B2BD0670E002C69EB /* spotifyLogo.png */,
+				93B528862BD064D1002C69EB /* Landing */,
+				93B5288D2BD0A43E002C69EB /* MoodLog */,
+				93B528942BD1B162002C69EB /* MoodSongPlayer */,
+				930D3E382BD0290500465ED5 /* Frameworks */,
+				930D3E242BD016FE00465ED5 /* AppDelegate.swift */,
+				930D3E262BD016FE00465ED5 /* SceneDelegate.swift */,
+				930D3E282BD016FE00465ED5 /* ViewController.swift */,
+				930D3E2A2BD016FE00465ED5 /* Main.storyboard */,
+				930D3E2D2BD0170200465ED5 /* Assets.xcassets */,
+				930D3E2F2BD0170200465ED5 /* LaunchScreen.storyboard */,
+				930D3E322BD0170200465ED5 /* Info.plist */,
+				930D3E3E2BD033D400465ED5 /* Constants.swift */,
+				930D3E452BD05F8B00465ED5 /* SpotifyService.swift */,
+				93B528992BD2CEDD002C69EB /* SpotifyModels.swift */,
+			);
+			path = Moody_iOS;
+			sourceTree = "<group>";
+		};
+		930D3E382BD0290500465ED5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				930D3E392BD0295500465ED5 /* SpotifyiOS.xcframework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		93B528862BD064D1002C69EB /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				93B528872BD064FB002C69EB /* ConnectLandingViewController.swift */,
+				93B528892BD06520002C69EB /* ConnectLandingScreen.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		93B5288D2BD0A43E002C69EB /* MoodLog */ = {
+			isa = PBXGroup;
+			children = (
+				93B5288E2BD0A46A002C69EB /* MoodLogScreen.swift */,
+				93B528902BD0A490002C69EB /* MoodLogViewController.swift */,
+			);
+			path = MoodLog;
+			sourceTree = "<group>";
+		};
+		93B528942BD1B162002C69EB /* MoodSongPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				93B528952BD1B1A8002C69EB /* MoodSongPlayerScreen.swift */,
+				93B528972BD1B223002C69EB /* MoodSongPlayerViewController.swift */,
+			);
+			path = MoodSongPlayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		930D3E202BD016FE00465ED5 /* Moody_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 930D3E352BD0170200465ED5 /* Build configuration list for PBXNativeTarget "Moody_iOS" */;
+			buildPhases = (
+				930D3E1D2BD016FE00465ED5 /* Sources */,
+				930D3E1E2BD016FE00465ED5 /* Frameworks */,
+				930D3E1F2BD016FE00465ED5 /* Resources */,
+				930D3E3D2BD02A5900465ED5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Moody_iOS;
+			productName = Moody_iOS;
+			productReference = 930D3E212BD016FE00465ED5 /* Moody_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		930D3E192BD016FE00465ED5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					930D3E202BD016FE00465ED5 = {
+						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
+					};
+				};
+			};
+			buildConfigurationList = 930D3E1C2BD016FE00465ED5 /* Build configuration list for PBXProject "Moody_iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 930D3E182BD016FE00465ED5;
+			productRefGroup = 930D3E222BD016FE00465ED5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				930D3E202BD016FE00465ED5 /* Moody_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		930D3E1F2BD016FE00465ED5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				930D3E2E2BD0170200465ED5 /* Assets.xcassets in Resources */,
+				93B5288C2BD0670E002C69EB /* spotifyLogo.png in Resources */,
+				930D3E312BD0170200465ED5 /* Base in Resources */,
+				930D3E2C2BD016FE00465ED5 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		930D3E1D2BD016FE00465ED5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93B528912BD0A490002C69EB /* MoodLogViewController.swift in Sources */,
+				930D3E292BD016FE00465ED5 /* ViewController.swift in Sources */,
+				93B5289A2BD2CEDD002C69EB /* SpotifyModels.swift in Sources */,
+				930D3E252BD016FE00465ED5 /* AppDelegate.swift in Sources */,
+				930D3E272BD016FE00465ED5 /* SceneDelegate.swift in Sources */,
+				93B528882BD064FB002C69EB /* ConnectLandingViewController.swift in Sources */,
+				93B5288A2BD06520002C69EB /* ConnectLandingScreen.swift in Sources */,
+				93B528982BD1B223002C69EB /* MoodSongPlayerViewController.swift in Sources */,
+				93B5288F2BD0A46A002C69EB /* MoodLogScreen.swift in Sources */,
+				930D3E462BD05F8B00465ED5 /* SpotifyService.swift in Sources */,
+				930D3E3F2BD033D400465ED5 /* Constants.swift in Sources */,
+				93B528962BD1B1A8002C69EB /* MoodSongPlayerScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		930D3E2A2BD016FE00465ED5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				930D3E2B2BD016FE00465ED5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		930D3E2F2BD0170200465ED5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				930D3E302BD0170200465ED5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		930D3E332BD0170200465ED5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		930D3E342BD0170200465ED5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		930D3E362BD0170200465ED5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9AMBAS6ZRQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Moody_iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Moody;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paulabwj.Moody-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Moody_iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		930D3E372BD0170200465ED5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9AMBAS6ZRQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Moody_iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Moody;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.paulabwj.Moody-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Moody_iOS-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		930D3E1C2BD016FE00465ED5 /* Build configuration list for PBXProject "Moody_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930D3E332BD0170200465ED5 /* Debug */,
+				930D3E342BD0170200465ED5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		930D3E352BD0170200465ED5 /* Build configuration list for PBXNativeTarget "Moody_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				930D3E362BD0170200465ED5 /* Debug */,
+				930D3E372BD0170200465ED5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 930D3E192BD016FE00465ED5 /* Project object */;
+}
