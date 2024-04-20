@@ -43,12 +43,12 @@ class MoodLogViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.updateSongDetails()
     }
     
-    @objc func pickImage() {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = .photoLibrary
-        present(picker, animated: true)
-    }
+//    @objc func pickImage() {
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.sourceType = .photoLibrary
+//        present(picker, animated: true)
+//    }
     
     @objc func moodButtonTapped(_ sender: UIButton) {
         //UI interaction
@@ -137,6 +137,46 @@ class MoodLogViewController: UIViewController, UIImagePickerControllerDelegate, 
         moodLogScreen.isImageSelected = false
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    @objc func pickImage() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+
+        // Create an action sheet to let the user choose between the camera and the photo library
+        let alertController = UIAlertController(title: nil, message: "Choose an option", preferredStyle: .actionSheet)
+        
+        // Add a camera option if it's available
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "Take Photo", style: .default) { [weak self] _ in
+                guard let self = self else { return }
+                picker.sourceType = .camera
+                self.present(picker, animated: true, completion: nil)
+            }
+            alertController.addAction(cameraAction)
+        }
+        
+        // Add a photo library option
+        let libraryAction = UIAlertAction(title: "Choose from Library", style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true, completion: nil)
+        }
+        alertController.addAction(libraryAction)
+        
+        // Add a cancel option
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancelAction)
+
+        // Present the action sheet
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = self.view // or specify another view if needed
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = [] // for iPads
+        }
+        present(alertController, animated: true)
+    }
+
     
     func navigateToMoodSongPlayer() {
         let moodSongPlayerVC = MoodSongPlayerViewController()
