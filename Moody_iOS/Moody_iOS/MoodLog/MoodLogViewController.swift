@@ -16,8 +16,8 @@ class MoodLogViewController: UIViewController, UIImagePickerControllerDelegate, 
     var moodLogScreen = MoodLogScreen()
     var moodSelected = ""
     var generatedTrack = Track(name: "", id: "", album: Album(name: "", images: []), artists: [] , previewUrl: nil)
+    var albumArtUrl = ""
 
-    
     
     override func loadView() {
         view = moodLogScreen
@@ -35,11 +35,12 @@ class MoodLogViewController: UIViewController, UIImagePickerControllerDelegate, 
             button.addTarget(self, action: #selector(moodButtonTapped(_:)), for: .touchUpInside)
         }
         moodLogScreen.submitButton.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
+        moodLogScreen.playPauseButton.addTarget(self, action: #selector(togglePlayPause), for: .touchUpInside)
     }
     
     
     func moodSongPlayerDidSelectSong() {
-        self.updateSongDetails(image: UIImage(), songName: generatedTrack.name, artistName: generatedTrack.artists.first?.name ?? "Unknown Artist")
+        self.updateSongDetails()
     }
     
     @objc func pickImage() {
@@ -63,8 +64,6 @@ class MoodLogViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
-    
-  
     
     @objc func submitTapped() {
         if moodLogScreen.isImageSelected && moodLogScreen.isMoodSelected {
@@ -96,39 +95,7 @@ class MoodLogViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
     
-//    @objc func submitTapped() {
-//        if moodLogScreen.isImageSelected && moodLogScreen.isMoodSelected {
-//            print("Both mood and image have been selected. Proceeding to navigate...")
-//            let (minValence, maxValence, minEnergy, maxEnergy) = attributesForMood(mood: moodSelected)
-//            
-//            SpotifyService.shared.fetchSongRecommendationForMood(minValence: minValence, maxValence: maxValence, minEnergy: minEnergy, maxEnergy: maxEnergy) { result in
-//                DispatchQueue.main.async {
-//                    switch result {
-//                    case .success(let tracks):
-//                        if let firstTrack = tracks.first {
-//                            self.generatedTrack = firstTrack
-//                            self.updateSongDetailsForSelectedTrack(track: firstTrack)
-//                            self.navigateToMoodSongPlayer()
-//                        } else {
-//                            print("No tracks found for the specified mood settings.")
-//                            self.showAlertForNoTracksFound()
-//                        }
-//                    case .failure(let error):
-//                        print("Error fetching recommendations: \(error.localizedDescription)")
-//                        self.showAlertForError(error: error)
-//                    }
-//                }
-//            }
-//        } else {
-//            print("Please select both a mood and an image.")
-//            showAlertForIncompleteSelection()
-//        }
-//    }
-    
 
-    
-    
-    
     func attributesForMood(mood: String) -> (minValence: Float, maxValence: Float, minEnergy: Float, maxEnergy: Float) {
         switch mood {
         case "Happy":
@@ -191,17 +158,51 @@ class MoodLogViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
 
     
-    
-    func updateSongDetails(image: UIImage, songName: String, artistName: String) {
-        moodLogScreen.songImageView.image = image
-        moodLogScreen.songNameLabel.text = songName
-        moodLogScreen.artistLabel.text = artistName
+    func updateSongDetails() {
+        
+        guard let imageUrl = generatedTrack.album.images.first?.url else {
+            print("No image URL available")
+            return
+        }
+        SpotifyService.shared.fetchArtwork(from: imageUrl) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let image):
+                    self?.moodLogScreen.songImageView.image = image
+                case .failure(let error):
+                    print("Failed to fetch album artwork: \(error.localizedDescription)")
+                    self?.moodLogScreen.songImageView.image = UIImage(named: "defaultAlbumCover") // Fallback image
+                }
+            }
+        }
+        
+        moodLogScreen.songNameLabel.text = generatedTrack.name
+        moodLogScreen.artistLabel.text = generatedTrack.artists.first?.name
         
         moodLogScreen.songView.isHidden = false
         moodLogScreen.moodButtonStackView.isHidden = true  // Hide the mood buttons
         moodLogScreen.submitButton.isHidden = true
         moodLogScreen.moodLabelTitle.text = moodSelected
         
+    }
+    
+    @objc private func togglePlayPause() {
+
+        SpotifyService.shared.playOrPauseTrack() // Call the play or pause method
+
+        // Retrieve the current state to update the button icon correctly
+        SpotifyService.shared.appRemote.playerAPI?.getPlayerState { [weak self] playerState, error in
+            guard let self = self, let playerState = playerState as? SPTAppRemotePlayerState, error == nil else {
+                print("Failed to get the current player state: \(error?.localizedDescription ?? "unknown error")")
+                return
+            }
+
+            let isPlaying = !playerState.isPaused
+            let icon = isPlaying ? UIImage(systemName: "pause.fill") : UIImage(systemName: "play.fill")
+            DispatchQueue.main.async {
+                self.moodLogScreen.playPauseButton.setImage(icon, for: .normal)
+            }
+        }
     }
     
 }

@@ -30,9 +30,8 @@ class MoodSongPlayerViewController: UIViewController {
         super.viewDidLoad()
         moodSongPlayerScreen.playPauseButton.addTarget(self, action: #selector(togglePlayPause), for: .touchUpInside)
         moodSongPlayerScreen.saveMoodSongButton.addTarget(self, action: #selector(saveMoodSong), for: .touchUpInside)
+        updateAlbumArtwork()
         SpotifyService.shared.playTrack(trackID: generatedTrack?.id ?? "")
-        
-        
         
     }
     
@@ -60,23 +59,24 @@ class MoodSongPlayerViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-//    func updateAlbumArtwork() {
-//        guard let trackID = generatedTrack?.id else {
-//            print("Track ID is unavailable")
-//            return
-//        }
-//
-//        SpotifyService.shared.fetchAlbumArtwork(trackID: trackID) { [weak self] image in
-//            DispatchQueue.main.async {
-//                guard let self = self else { return }
-//                if let image = image {
-//                    self.moodSongPlayerScreen.imageView.image = image
-//                } else {
-//                    self.moodSongPlayerScreen.imageView.image = UIImage(named: "defaultAlbumCover") // Fallback image
-//                }
-//            }
-//        }
-//    }
+    func updateAlbumArtwork() {
+        guard let imageUrl = generatedTrack?.album.images.first?.url else {
+            print("No image URL available")
+            return
+        }
+        
+        SpotifyService.shared.fetchArtwork(from: imageUrl) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let image):
+                    self?.moodSongPlayerScreen.imageView.image = image
+                case .failure(let error):
+                    print("Failed to fetch album artwork: \(error.localizedDescription)")
+                    self?.moodSongPlayerScreen.imageView.image = UIImage(named: "defaultAlbumCover") // Fallback image
+                }
+            }
+        }
+    }
 
 }
 
