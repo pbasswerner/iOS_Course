@@ -99,13 +99,13 @@ class MoodLogViewController: UIViewController, UIImagePickerControllerDelegate, 
     func attributesForMood(mood: String) -> (minValence: Float, maxValence: Float, minEnergy: Float, maxEnergy: Float) {
         switch mood {
         case "Happy":
-            return (0.75, 1.0, 0.5, 1.0)  // High valence, medium to high energy
+            return (0.75, 1.0, 0.75, 1.0)  // High valence, medium to high energy
         case "Sad":
             return (0.0, 0.25, 0.0, 0.5)  // Low valence, low to medium energy
         case "Agitated":
-            return (0.1, 0.50, 0.75, 1.0)  // Low to Medium valence, high energy
+            return (0.0, 0.30, 0.75, 1.0)  // Low to Medium valence, high energy
         case "Calm":
-            return (0.4, 0.8, 0.0, 0.4)   // Low to medium valence, low energy
+            return (0.75, 1.0, 0.1, 0.4)   // Low to medium valence, low energy
         default:
             return (0.25, 0.75, 0.25, 0.75)  // Default range
         }
