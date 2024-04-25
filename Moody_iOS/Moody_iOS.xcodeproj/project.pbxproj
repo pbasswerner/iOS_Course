@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		930D3E252BD016FE00465ED5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930D3E242BD016FE00465ED5 /* AppDelegate.swift */; };
 		930D3E272BD016FE00465ED5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930D3E262BD016FE00465ED5 /* SceneDelegate.swift */; };
-		930D3E292BD016FE00465ED5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930D3E282BD016FE00465ED5 /* ViewController.swift */; };
 		930D3E2C2BD016FE00465ED5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 930D3E2B2BD016FE00465ED5 /* Base */; };
 		930D3E2E2BD0170200465ED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 930D3E2D2BD0170200465ED5 /* Assets.xcassets */; };
 		930D3E312BD0170200465ED5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 930D3E302BD0170200465ED5 /* Base */; };
@@ -45,7 +44,6 @@
 		930D3E212BD016FE00465ED5 /* Moody_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moody_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		930D3E242BD016FE00465ED5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		930D3E262BD016FE00465ED5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		930D3E282BD016FE00465ED5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		930D3E2B2BD016FE00465ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		930D3E2D2BD0170200465ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		930D3E302BD0170200465ED5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				930D3E382BD0290500465ED5 /* Frameworks */,
 				930D3E242BD016FE00465ED5 /* AppDelegate.swift */,
 				930D3E262BD016FE00465ED5 /* SceneDelegate.swift */,
-				930D3E282BD016FE00465ED5 /* ViewController.swift */,
 				930D3E2A2BD016FE00465ED5 /* Main.storyboard */,
 				930D3E2D2BD0170200465ED5 /* Assets.xcassets */,
 				930D3E2F2BD0170200465ED5 /* LaunchScreen.storyboard */,
@@ -225,7 +222,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B528912BD0A490002C69EB /* MoodLogViewController.swift in Sources */,
-				930D3E292BD016FE00465ED5 /* ViewController.swift in Sources */,
 				93B5289A2BD2CEDD002C69EB /* SpotifyModels.swift in Sources */,
 				930D3E252BD016FE00465ED5 /* AppDelegate.swift in Sources */,
 				930D3E272BD016FE00465ED5 /* SceneDelegate.swift in Sources */,

@@ -42,13 +42,7 @@ class MoodLogViewController: UIViewController, UIImagePickerControllerDelegate, 
     func moodSongPlayerDidSelectSong() {
         self.updateSongDetails()
     }
-    
-//    @objc func pickImage() {
-//        let picker = UIImagePickerController()
-//        picker.delegate = self
-//        picker.sourceType = .photoLibrary
-//        present(picker, animated: true)
-//    }
+
     
     @objc func moodButtonTapped(_ sender: UIButton) {
         //UI interaction
