@@ -13,6 +13,13 @@
 		93E1EAD42BDAE7B400021E1A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 93E1EAD32BDAE7B400021E1A /* Base */; };
 		93E1EAD62BDAE7B700021E1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E1EAD52BDAE7B700021E1A /* Assets.xcassets */; };
 		93E1EAD92BDAE7B700021E1A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 93E1EAD82BDAE7B700021E1A /* Base */; };
+		93E1EAE22BDAE90000021E1A /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E1EAE12BDAE90000021E1A /* Contact.swift */; };
+		93E1EAE72BDAE9B000021E1A /* DetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E1EAE62BDAE9B000021E1A /* DetailsScreen.swift */; };
+		93E1EAE92BDAE9BF00021E1A /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E1EAE82BDAE9BF00021E1A /* DetailsScreenViewController.swift */; };
+		93E1EAEC2BDAEA7500021E1A /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E1EAEB2BDAEA7500021E1A /* AddNewContactViewController.swift */; };
+		93E1EAEE2BDAEA8800021E1A /* AddNewContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E1EAED2BDAEA8800021E1A /* AddNewContactScreen.swift */; };
+		93E1EAF12BDAEAE700021E1A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E1EAF02BDAEAE700021E1A /* MainScreen.swift */; };
+		93E1EAF32BDAEB1900021E1A /* TableViewCellContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E1EAF22BDAEB1900021E1A /* TableViewCellContact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		93E1EAD52BDAE7B700021E1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93E1EAD82BDAE7B700021E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93E1EADA2BDAE7B700021E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93E1EAE12BDAE90000021E1A /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		93E1EAE62BDAE9B000021E1A /* DetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreen.swift; sourceTree = "<group>"; };
+		93E1EAE82BDAE9BF00021E1A /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
+		93E1EAEB2BDAEA7500021E1A /* AddNewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactViewController.swift; sourceTree = "<group>"; };
+		93E1EAED2BDAEA8800021E1A /* AddNewContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactScreen.swift; sourceTree = "<group>"; };
+		93E1EAF02BDAEAE700021E1A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		93E1EAF22BDAEB1900021E1A /* TableViewCellContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellContact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,54 @@
 		93E1EACB2BDAE7B400021E1A /* WA5_Basswerner_8001 */ = {
 			isa = PBXGroup;
 			children = (
+				93E1EAEF2BDAEAC800021E1A /* Main_Screen */,
+				93E1EAEA2BDAEA4E00021E1A /* Add_New_Contact_Screen */,
+				93E1EAE32BDAE91C00021E1A /* Details_Screen */,
+				93E1EAE02BDAE8CB00021E1A /* Data_Model */,
 				93E1EACC2BDAE7B400021E1A /* AppDelegate.swift */,
 				93E1EACE2BDAE7B400021E1A /* SceneDelegate.swift */,
-				93E1EAD02BDAE7B400021E1A /* ViewController.swift */,
 				93E1EAD22BDAE7B400021E1A /* Main.storyboard */,
 				93E1EAD52BDAE7B700021E1A /* Assets.xcassets */,
 				93E1EAD72BDAE7B700021E1A /* LaunchScreen.storyboard */,
 				93E1EADA2BDAE7B700021E1A /* Info.plist */,
 			);
 			path = WA5_Basswerner_8001;
+			sourceTree = "<group>";
+		};
+		93E1EAE02BDAE8CB00021E1A /* Data_Model */ = {
+			isa = PBXGroup;
+			children = (
+				93E1EAE12BDAE90000021E1A /* Contact.swift */,
+			);
+			path = Data_Model;
+			sourceTree = "<group>";
+		};
+		93E1EAE32BDAE91C00021E1A /* Details_Screen */ = {
+			isa = PBXGroup;
+			children = (
+				93E1EAE62BDAE9B000021E1A /* DetailsScreen.swift */,
+				93E1EAE82BDAE9BF00021E1A /* DetailsScreenViewController.swift */,
+			);
+			path = Details_Screen;
+			sourceTree = "<group>";
+		};
+		93E1EAEA2BDAEA4E00021E1A /* Add_New_Contact_Screen */ = {
+			isa = PBXGroup;
+			children = (
+				93E1EAEB2BDAEA7500021E1A /* AddNewContactViewController.swift */,
+				93E1EAED2BDAEA8800021E1A /* AddNewContactScreen.swift */,
+			);
+			path = Add_New_Contact_Screen;
+			sourceTree = "<group>";
+		};
+		93E1EAEF2BDAEAC800021E1A /* Main_Screen */ = {
+			isa = PBXGroup;
+			children = (
+				93E1EAF02BDAEAE700021E1A /* MainScreen.swift */,
+				93E1EAF22BDAEB1900021E1A /* TableViewCellContact.swift */,
+				93E1EAD02BDAE7B400021E1A /* ViewController.swift */,
+			);
+			path = Main_Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93E1EAE22BDAE90000021E1A /* Contact.swift in Sources */,
 				93E1EAD12BDAE7B400021E1A /* ViewController.swift in Sources */,
+				93E1EAF32BDAEB1900021E1A /* TableViewCellContact.swift in Sources */,
+				93E1EAEC2BDAEA7500021E1A /* AddNewContactViewController.swift in Sources */,
+				93E1EAEE2BDAEA8800021E1A /* AddNewContactScreen.swift in Sources */,
+				93E1EAE72BDAE9B000021E1A /* DetailsScreen.swift in Sources */,
+				93E1EAE92BDAE9BF00021E1A /* DetailsScreenViewController.swift in Sources */,
+				93E1EAF12BDAEAE700021E1A /* MainScreen.swift in Sources */,
 				93E1EACD2BDAE7B400021E1A /* AppDelegate.swift in Sources */,
 				93E1EACF2BDAE7B400021E1A /* SceneDelegate.swift in Sources */,
 			);
